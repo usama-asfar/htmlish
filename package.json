@@ -11,8 +11,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest --coverage",
-    "lint": "standard",
-    "format": "prettier-standard --format"
+    "format": "yarn prettier --write ."
   },
   "husky": {
     "hooks": {
@@ -36,25 +35,21 @@
   ],
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "eslint": "^7.20.0",
     "jest": "^26.6.3",
+    "prettier": "2.2.1",
     "rollup": "^2.39.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.29.0",
-    "standard": "^16.0.3",
-    "standard-prettier": "^1.0.1",
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.5"
   },
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
-  },
-  "standard": {
-    "ignore": [
-      "node_modules/",
-      "build/"
-    ]
   }
 }
