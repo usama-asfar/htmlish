@@ -1,5 +1,9 @@
 import { injecter } from '../helper';
 
-export default function a(string: string): () => string {
-  return () => injecter('a', string);
+import { AnchorHTMLAttributes } from '../index.d';
+
+export default function a(string: string): (attributes: AnchorHTMLAttributes) => string {
+  return () => {
+    return injecter('a', string);
+  };
 }
